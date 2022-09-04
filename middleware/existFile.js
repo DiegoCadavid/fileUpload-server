@@ -24,7 +24,7 @@ const existFile = (req, res, next) => {
     }
 
     // Verificamos si el mimeType corresponde a una imagen 
-    if (!['image/png', 'image/jpg'].includes(file.image.mimetype)) {
+    if (!['image/png', 'image/jpeg'].includes(file.image.mimetype)) {
         return res.status(400).json({
             msg : 'El archivo debe ser un png o jpg'
         })
